@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "tryzhouyi",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/static" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": { "Content-Type": "application/xml" }
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": { "Content-Type": "text/plain" }
+    }
+  ]
+}

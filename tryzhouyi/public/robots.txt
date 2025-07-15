@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /user
+Disallow: /my-hexagrams
+
+Sitemap: https://www.tryzhouyi.com/sitemap.xml
